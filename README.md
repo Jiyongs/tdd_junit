@@ -27,9 +27,24 @@ maven에서 아래와 같이 추가하여 사용
 
 
 ### TDD Pattern
-테스트 코드를 작성할 때 'given-when-then' 패턴을 주로 쓴다.(LottoTest.java 참고)    
+테스트 코드를 작성할 때 'given-when-then' 패턴을 주로 쓴다. (LottoTest.java 참고)    
 ```
 given(준비) : 테스트 시나리오에 필요한 값이 무엇인지 정의   
 when(실행) : 시나리오의 진행 조건을 명시   
 then(결과) : 시나리오로 인해 기대되는 결과
+```
+
+
+
+### Mock Object
+테스트하려는 코드에서 실제 구현이 어려운 객체를 대신하여 동작하는 가짜 객체 (SimpleServiceMockTest.java 참고)      
+maven에서 아래와 같이 추가하여 사용 
+```
+<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-all</artifactId>
+    <version>1.10.19</version>
+    <scope>test</scope>
+</dependency>
 ```
